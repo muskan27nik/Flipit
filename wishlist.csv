@@ -1,0 +1,7 @@
+users,products,rating,price,f_assured,sub_cat,brand
+bhavesh28,"[77,84,70,66]","[5,5,5,5]","[300,900,999,220]","[1,1,1,1]","['sk','sk','lk','lk']","['brand3','brand5','brand2','brand4']"
+divyansh18,"[64,175,193]","[5,4,5]","[300,344,620]","[1,1,1]","['sk','lk','sk']","['brand1','brand5','brand2']"
+vaishali19,"[30,229,235]","[5,1,5]","[3000,940,400]","[0,1,1]","['saree','tee','tee']","['brand5','brand2','brand3']"
+soumya13,"[232,237,238,256]","[3,3,3,2]","[589,540,680,890]","[0,0,0,1]","['tee','tee','tee','coord']","['brand2','brand2','brand4','brand2']"
+prabal23,"[146,150,166]","[5,4,5]","[3400,3245,1809]","[1,1,0]","['fs','fs','hs']","['brand2','brand3','brand3']"
+muskan27,"[250,253,257]","[5,5,3]","[300,599,2150]","[1,0,0]","['coord','coord','coord']","['brand3','brand4','brand3']"

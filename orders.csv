@@ -1,0 +1,7 @@
+users,products,rating,price,f_assured,sub_cat,brand
+bhavesh28,"[35,49,42,43]","[5,4,4,5]","[550,660,900,950]","[1,1,0,1]","['hs','hs','fs','fs']","['brand2','brand2','brand4','brand5']"
+muskan27,"[61,53,58,60,2]","[1,3,2,3,5]","[2999,2200,3200,200,3000]","[0,0,1,1,0]","['coord','coord','coord','coord','dress']","['brand3','brand3','brand3','brand5','brand2']"
+divyansh18,"[4,36,37,76,78,80,81]","[2,5,5,5,3,3]","[400,550,600,200,300,400,160]","[1,1,1,1,1,1,1]","['suit','hf','hf','lk','lk','lk','lk']","['brand3','brand2','brand3','brand1','brand3','brand5','brand1']"
+vaishali19,"[87,88,91,94,95,26,29,33]","[5,1,5,4,3,1,4,2]","[670,670,480,999,376,6000,8000,2100]","[1,0,1,0,1,0,1,1]","['tee','tee','tee','tee','tee','saree','saree','saree']","['brand1','brand2','brand5','brand3','brand4','brand1','brand4','brand3']"
+soumya13,"[1,2,7,23,221,222,223]","[3,5,3,3,3,2,3]","[2500,3000,3300,570,689,989,4000]","[1,0,1,1,1,0,1]","['dress','dress','dress','dress','dress','dress','coord']","['brand2','brand2','brand3','brand1','brand3','brand4','brand5']"
+prabal23,"[133,144,147,148,168,169,177,200]","[4,5,2,2,5,2,3,4]","[2000,2899,4300,5670,1500,2300,2190,2090]","[0,0,0,1,0,1,1,0]","['fs','fs','fs','fs','hs','hs','lk','sk']","['brand1','brand1','brand3','brand4','brand5','brand1','brand1','brand1']"

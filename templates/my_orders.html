@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Orders</title>
+    <link rel="stylesheet" href="static/css/orders.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="static/images/finall.png" alt="logo">
+            </div>
+            <div class="search">
+                <div class="search-container">
+                    <input type="text" class="search-box" placeholder="Search for products, brands and more">
+                    <button class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 17 18" class="" xmlns="http://www.w3.org/2000/svg"><g fill="#2874F1" fill-rule="evenodd"><path class="_34RNph" d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203"></path><path class="_34RNph" d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467"></path></g></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="become-seller">
+                Welcome &nbsp;  <span>{{user_id}}</span>
+            </div>
+            <div class="order">
+                <a href="/choose_gender" style="text-decoration: none; color: white;">
+                    <svg width="20" height="20" style="color: white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                        <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                    </svg>
+                    Home
+                </a>
+            </div>
+            <div class="cart">
+                <a href = "/wishlist" style="text-decoration:none; color:white;">
+                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+                </svg>
+                Wishlist
+                </a>
+            </div>
+
+            <div class="login">
+                <button style="display: inline;">
+                    <a href="/" style="text-decoration:none; color:white;">
+                        <svg width="20" height="20" style="color: white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6" >
+                        <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v9a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.166 5.106a.75.75 0 010 1.06 8.25 8.25 0 1011.668 0 .75.75 0 111.06-1.06c3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788a.75.75 0 011.06 0z" clip-rule="evenodd" />
+                    </svg>
+                    </a>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="headerr">My Orders</div>
+    <div class="orders-container">
+        {% for product in ordered_products.itertuples() %}
+        <div class="order-card">
+            <img class="order-image" src="{{ product.image_url }}" alt="{{ product.products }}">
+            <div class="order-details">
+                <div class="product-name">{{ product.products }}</div>
+                <div class="product-brand">{{ product.brand }}</div>
+                <p class="price">₹{{product.price }}</p>
+                <div class="rating">
+                    {% for _ in range(product.rating) %}
+                    &#9733;
+                    {% endfor %}
+                </div>
+                {% if product.f_assured %}
+                <span class="assured-badge">&#10004; Assured</span>
+                {% endif %}
+                <span class="delivered-badge">&#8226; Delivered</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
